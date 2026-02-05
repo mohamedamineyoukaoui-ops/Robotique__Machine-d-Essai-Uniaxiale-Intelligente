@@ -1,0 +1,32 @@
+{
+    "model_type": "KNeighborsClassifier",
+    "features": [
+        "Su",
+        "Sy",
+        "E"
+    ],
+    "n_neighbors": 5,
+    "n_classes": 11,
+    "classes": [
+        "acier",
+        "alliage cuivre",
+        "alliage d'aluminium",
+        "alliages de magnésium",
+        "bronze au manganèse",
+        "bronze d'aluminium",
+        "bronze à l'étain",
+        "fonte grise",
+        "fonte malléable",
+        "fonte nodulaire",
+        "laiton"
+    ],
+    "accuracy": 0.9342560553633218,
+    "training_strategy": {
+        "train_data": "original + augmented",
+        "test_data": "original only",
+        "train_size_total": 10106,
+        "train_size_original": 1152,
+        "train_size_augmented": 8954,
+        "test_size": 289
+    }
+}

@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebooks (training code - not needed for deployment)
+*.ipynb
+.ipynb_checkpoints/
+
+# Datasets (large files)
+*.xlsx
+*.csv
+
+# PowerPoint presentations
+*.pptx
+*.ppt
+
+# Duplicate model files (keep only rf_material_classifier.pkl)
+rf_material_classifier (2).pkl
+rf_material_classifier (3).pkl
+knn_material_classifier.pkl
+knn_model.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Exports folder (generated at runtime)
+exports/
+
+# Temporary files
+*.tmp
+*.log
+
+# License (not needed)
+LICENSE
