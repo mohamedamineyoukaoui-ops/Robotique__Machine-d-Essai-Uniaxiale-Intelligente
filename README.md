@@ -40,7 +40,7 @@ Les propriétés mécaniques des matériaux sont essentielles en génie mécaniq
 
 L'architecture est structurée en 4 couches distinctes pour assurer modularité et maintenabilité.
 
-![Architecture Logicielle](docs/images/architecture_layers.png)
+![Architecture Logicielle](docs/images/couches.png)
 
 ### Structure du Projet
 
@@ -138,7 +138,7 @@ class ModernAnalysisApp:
 
 L'interface IHM (Interface Homme-Machine) est organisée pour faciliter l'acquisition et l'analyse.
 
-![Interface Graphique](docs/images/interface_screenshot.png)
+![Interface Graphique](docs/images/interface.png)
 
 Structure de l'interface :
 
@@ -265,10 +265,6 @@ Su = np.max(stress)  # Point maximum de la courbe
 
 ### Schéma de l'Algorithme Complet
 
-Basé sur l'organigramme de fonctionnement :
-
-![Algorithme Extraction](docs/images/algo_extraction.png)
-
 Le processus détaillé est le suivant :
 
 ```
@@ -373,8 +369,6 @@ Le modèle a été entraîné avec data augmentation pour équilibrer le dataset
 | Augmentées | 8,954 échantillons |
 | **Total entraînement** | **10,106 échantillons** |
 | Test (originales uniquement) | 289 échantillons |
-
-![Flux Data Augmentation](docs/images/data_augmentation_flow.png)
 
 ---
 
