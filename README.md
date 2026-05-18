@@ -138,44 +138,11 @@ class ModernAnalysisApp:
 
 L'interface IHM (Interface Homme-Machine) est organisée pour faciliter l'acquisition et l'analyse.
 
-![Interface Graphique](docs/images/interface.png)
+
 
 Structure de l'interface :
+![Interface Graphique](docs/images/interface.png)
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              HEADER                                          │
-│  Titre du projet    │    Indicateur de statut de connexion                  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                         PANNEAU DE CONTRÔLE                                  │
-│  [Port COM ▼]  [Baudrate ▼]  Points: 0  [DÉMARRER] [ANALYSER] [Réinit. vue] │
-│                                         [○ Lissé  ○ Original]  [Plein écran]│
-├──────────────────────────────────────────┬──────────────────────────────────┤
-│                                          │                                   │
-│          ZONE DE VISUALISATION           │       PANNEAU RÉSULTATS           │
-│                                          │                                   │
-│    ┌────────────────────────────────┐    │   MATÉRIAU DÉTECTÉ               │
-│    │                                │    │   ┌─────────────────────────┐    │
-│    │     Courbe σ-ε temps réel      │    │   │       Acier             │    │
-│    │                                │    │   └─────────────────────────┘    │
-│    │     ────────────────           │    │                                   │
-│    │    /                           │    │   E (Module de Young)            │
-│    │   /                            │    │   210,000 MPa                    │
-│    │  /                             │    │                                   │
-│    │ │                              │    │   Sy (Limite élastique)          │
-│    │                                │    │   250 MPa                        │
-│    │                                │    │                                   │
-│    └────────────────────────────────┘    │   Su (Résistance max)            │
-│                                          │   400 MPa                        │
-│    Glisser pour zoomer                   │                                   │
-│    Double-clic pour réinitialiser        │   R² (Qualité régression)        │
-│                                          │   0.9985                         │
-│                                          │                                   │
-│                                          │   ━━  EXPORTATION  ━━            │
-│                                          │   [Exporter CSV] [Exporter PNG]  │
-│                                          │   [SAUVEGARDER DANS LA BASE]     │
-└──────────────────────────────────────────┴──────────────────────────────────┘
-```
 
 - **Connexion série** : Scan automatique des ports COM, baudrate configurable
 - **Visualisation temps réel** : Rafraîchissement à 10 Hz, mode lissé/original
