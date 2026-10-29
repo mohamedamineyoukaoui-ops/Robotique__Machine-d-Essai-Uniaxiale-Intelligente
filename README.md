@@ -39,43 +39,7 @@ Développé dans le cadre d’un projet de robotique, le système associe une ma
 
 L’application suit quatre responsabilités : communication, acquisition, traitement et présentation. Elles sont regroupées dans un même fichier, [`main_gui.py`](main_gui.py).
 
-```mermaid
-flowchart TB
-    arduino["Arduino • Mesures de l’essai"]
-
-    subgraph acquisition["Communication et acquisition"]
-        serial["PySerial • Lecture dans un thread dédié"]
-        buffer["Données en mémoire • Déformation et contrainte"]
-        serial --> buffer
-    end
-
-    subgraph analysis["Traitement et classification"]
-        analyzer["MaterialAnalyzer • E, Sy, Su et R²"]
-        model["MLPredictor • Random Forest"]
-        analyzer --> model
-    end
-
-    subgraph presentation["Interface et restitution"]
-        gui["Tkinter • Commandes et résultats"]
-        plot["Matplotlib • Courbe et tangente"]
-        exports["Exports • CSV, PNG et historique"]
-        gui --> exports
-    end
-
-    arduino -->|"USB série • 115200 bauds"| serial
-    buffer --> analyzer
-    buffer -->|"Affichage en direct"| plot
-    analyzer -->|"Propriétés mécaniques"| gui
-    analyzer -->|"Courbe analysée"| plot
-    model -->|"Famille prédite"| gui
-
-    classDef hardware fill:#f1f5f9,stroke:#64748b,color:#0f172a;
-    classDef processing fill:#eff6ff,stroke:#2563eb,color:#1e3a8a;
-    classDef output fill:#ecfdf5,stroke:#059669,color:#064e3b;
-    class arduino hardware;
-    class serial,buffer,analyzer,model processing;
-    class gui,plot,exports output;
-```
+![Architecture logicielle en quatre couches : interface, logique applicative, traitement des données et communication série](docs/images/couches.png)
 
 | Classe | Responsabilité |
 | :--- | :--- |
