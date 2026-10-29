@@ -22,6 +22,7 @@ Développé dans le cadre d’un projet de robotique, le système associe une ma
 - [Installation](#installation)
 - [Utilisation](#utilisation)
 - [Communication et matériel](#communication-et-matériel)
+- [Présentation du projet](#présentation-du-projet)
 - [Contenu du dépôt](#contenu-du-dépôt)
 
 ## Fonctionnalités
@@ -183,6 +184,21 @@ L’acquisition est interrompue si aucune mesure valide n’arrive pendant les c
 
 ## Communication et matériel
 
+### Conception et réalisation
+
+Le rendu de conception et la photographie du prototype présentent la structure mécanique et son intégration dans la machine d’essai.
+
+<table>
+  <tr>
+    <th width="50%">Conception de la machine</th>
+    <th width="50%">Démonstration du prototype</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/images/machine-conception.png" alt="Rendu 3D de la machine avec châssis, mécanisme de compression et boîtier de commande" width="100%"></td>
+    <td align="center"><img src="docs/images/prototype-demonstration.jpeg" alt="Démonstration de la machine assemblée avec son enceinte transparente et son interface de commande" width="100%"></td>
+  </tr>
+</table>
+
 ### Protocole reçu par l’application
 
 Chaque mesure occupe une ligne contenant deux nombres séparés par une virgule : **déformation, contrainte**. Les lignes commençant par `#` sont traitées comme des messages ; `# FIN DU TEST` déclenche l’analyse.
@@ -248,6 +264,12 @@ flowchart LR
 
 Ces caractéristiques matérielles proviennent de la description du projet ; le dépôt contient la partie logicielle de bureau.
 
+## Présentation du projet
+
+Photographie de groupe autour du prototype lors de sa présentation.
+
+![Photographie de groupe autour de la machine d’essai uniaxiale](docs/images/presentation-projet.jpeg)
+
 ## Contenu du dépôt
 
 | Fichier | Rôle |
@@ -257,7 +279,7 @@ Ces caractéristiques matérielles proviennent de la description du projet ; le 
 | [`label_encoder.pkl`](label_encoder.pkl) | Encodeur des classes de matériaux. |
 | [`scaler.pkl`](scaler.pkl) | Normaliseur fourni, non utilisé dans le parcours actuel. |
 | [`knn_model_metadata.json`](knn_model_metadata.json) | Métadonnées du modèle KNN distinct du modèle utilisé. |
-| [`docs/images/`](docs/images/) | Capture de l’interface et illustration d’architecture. |
+| [`docs/images/`](docs/images/) | Interface, architecture, rendu de conception et photographies du prototype et de sa présentation. |
 | [`.gitignore`](.gitignore) | Exclusions Git, notamment jeux de données et notebooks. |
 
-Les schémas de ce README sont écrits en Mermaid pour rester lisibles, modifiables et versionnés avec le code.
+Les diagrammes de traitement et de communication sont écrits en Mermaid ; ils complètent l’illustration d’architecture et les photographies du projet.
